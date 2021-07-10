@@ -1,4 +1,6 @@
+const fs = require("fs");
 const http = require("http");
+const { mainModule } = require("process");
 const todos = require("./data");
 const Todo = require("./todoController");
 const { getPostData } = require("./utils");
@@ -11,10 +13,16 @@ const server = http.createServer(async (req, res) => {
 		res.writeHead(200, { "Content-Type": "application/json" });
 		// http response
 		res.end(JSON.stringify(todos));
+		//main
 	} else if (req.url === "/" && req.method === "GET") {
 		// end, write뭔차이..
 		res.writeHead(200, { "Content-Type": "text/html" });
-		res.end("<h1>hello</h1>");
+		fs.readFile(__dirname + "/main.html", (err, data) => {
+			if (err) {
+				return console.log(err);
+			}
+			res.end(data, "utf-8");
+		});
 		// 특정 todo 읽기
 	} else if (
 		req.url.match(/\/api\/todos\/([a-zA-Z0-9]+)/) &&
