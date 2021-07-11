@@ -1,0 +1,24 @@
+{
+	"name": "web-server-1",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"test": "mocha server.spec.js",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/danaisboss/web-server.git"
+	},
+	"author": "dana",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/danaisboss/web-server/issues"
+	},
+	"homepage": "https://github.com/danaisboss/web-server#readme",
+	"dependencies": {
+		"mocha": "^9.0.2",
+		"should": "^13.2.3"
+	}
+}
