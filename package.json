@@ -2,10 +2,10 @@
 	"name": "web-server-1",
 	"version": "1.0.0",
 	"description": "",
-	"main": "server.js",
+	"main": "app.js",
 	"scripts": {
-		"test": "mocha server.spec.js",
-		"start": "node server.js"
+		"test": "mocha ./src/Application.spec.js",
+		"start": "node bin.js"
 	},
 	"repository": {
 		"type": "git",
@@ -18,7 +18,10 @@
 	},
 	"homepage": "https://github.com/danaisboss/web-server#readme",
 	"dependencies": {
-		"mocha": "^9.0.2",
-		"should": "^13.2.3"
+		"should": "^13.2.3",
+		"sinon": "^11.1.1"
+	},
+	"devDependencies": {
+		"mocha": "^9.0.2"
 	}
 }
