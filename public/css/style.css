@@ -1,0 +1,21 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+	border-bottom: 1px #eee solid;
+}
+footer {
+	border-top: 1px #eee solid;
+}
+.container {
+	margin: 15px;
+	text-align: center;
+}
+.brand-color {
+	color: #5cb85c;
+}
+.image {
+	width: 430px;
+}
